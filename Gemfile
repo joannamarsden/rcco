@@ -9,7 +9,6 @@ group :development, :test do
   gem 'sqlite3'
 end
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
@@ -52,9 +51,6 @@ gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.1.0'
 #  gem 'refinerycms-search', '~> 2.1.0'
 #  gem 'refinerycms-page-images', '~> 2.1.0'
-
-# The Heroku gem allows you to interface with Heroku's API
-gem 'heroku'
 
 # Fog allows you to use S3 assets (added for Heroku)
 gem 'fog'
