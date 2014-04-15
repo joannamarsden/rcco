@@ -5,25 +5,24 @@
     <%= render "/refinery/head" %>
   </head>
   <body id="<%= canonical_id @page %>">
-    <div class="wrapper">
+    <div id="wrap">
     <%= site_bar -%>
-    <div id="page_container">
-      
+
       <header id="header">
         <%= render "/refinery/header" -%>
       </header>
 
       
-        <section id="page">
+        <section id="page" class="main">
           <%= yield %>
         </section>
-      <div class="push"></div>
-      </div>
+      
+    </div>
 
       <footer>
         <%= render "/refinery/footer" -%>
       </footer>
-    </div>
+    
     <%= render "/refinery/javascripts" %>
   </body>
 </html>

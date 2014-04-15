@@ -18,7 +18,7 @@
 $topbar-arrows: false;
  @import "foundation";
  @import url(http://fonts.googleapis.com/css?family=Cardo);
- @import url(http://fonts.googleapis.com/css?family=Oxygen);
+ @import url(http://fonts.googleapis.com/css?family=Tenor+Sans);
 
 
 // RefineryCMS Customization
@@ -37,27 +37,39 @@ header {
   }
 }
 footer {
+	background-color: #f7f7f7;
+	padding-top: 2%;
 }
 .top-bar {
   .title-area { z-index: 2; }
 }
 
-* {
-	margin: 0;
+/* Sticky Footer */
+
+* {margin:0;padding:0;} 
+
+html, body {height: 100%;}
+
+#wrap {min-height: 100%;}
+
+#main {overflow:auto;
+	padding-bottom: 180px;} 
+
+#footer {position: relative;
+	margin-top: -180px; /* negative value of footer height */
+	height: 180px;
+	clear:both;} 
+	
+/*Opera Fix*/
+body:before {/* thanks to Maleika (Kohoutec)*/
+content:"";
+height:100%;
+float:left;
+width:0;
+margin-top:-32767px;/* thank you Erik J - negate effect of float*/
 }
-html, body {
-	height: 100%;
-}
-.wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -4em;
-}
-.footer, .push {
-	height: 4em;
-	clear: both;
-}
+
+
 
 .footer-menu ul {
 	text-align: center;
@@ -70,4 +82,16 @@ html, body {
 
 .footer-menu p {
 	text-align: center;
+}
+
+body {
+	background: url(image_path("ricepaper2.png")) repeat 0 0 !important;
+}
+
+.headerimg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2em;
+	padding-bottom: 2em;
 }
